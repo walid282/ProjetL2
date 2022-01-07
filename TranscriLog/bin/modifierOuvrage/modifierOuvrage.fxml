@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modifierOuvrage.modifierOuvrageController">
+   <center>
+      <AnchorPane prefHeight="337.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane layoutY="38.0" prefHeight="260.0" prefWidth="571.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Ouvrage">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="22.0" text="Titre :" />
+                              <Label layoutX="14.0" layoutY="51.0" text="Date :" />
+                              <Label layoutX="15.0" layoutY="81.0" text="Commentaire :" />
+                              <TextField fx:id="txt_newTitreOuvrage" layoutX="137.0" layoutY="18.0" />
+                              <TextArea fx:id="txt_newCommentaire" layoutX="137.0" layoutY="81.0" prefHeight="135.0" prefWidth="264.0" />
+                              <Button fx:id="btn_ConfirmerModificationsOuvrage" layoutX="391.0" layoutY="31.0" mnemonicParsing="false" onAction="#btn_ConfirmerOuvrageOnAction" style="-fx-background-color: #1ec11e;" text="Confirmer modifications " textFill="WHITE" />
+                              <DatePicker fx:id="newDate" layoutX="137.0" layoutY="47.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Auteur">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="26.0" text="Nom :" />
+                              <Label layoutX="14.0" layoutY="62.0" text="Prénom :" />
+                              <TextField fx:id="txt_newNomAuteur" layoutX="122.0" layoutY="22.0" />
+                              <TextField fx:id="txt_newPrenomAuteur" layoutX="122.0" layoutY="58.0" />
+                              <Button fx:id="btn_ConfirmerModificationsAuteur" layoutX="365.0" layoutY="46.0" mnemonicParsing="false" onAction="#btn_ConfirmerAuteurOnAction" style="-fx-background-color: #1ec11e;" text="Confirmer modifications " textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Editeur">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="29.0" text="Nom :" />
+                              <Label layoutX="14.0" layoutY="62.0" text="Adresse :" />
+                              <Label layoutX="16.0" layoutY="95.0" text="Télephone :" />
+                              <TextField fx:id="txt_newNomEditeur" layoutX="119.0" layoutY="25.0" prefHeight="25.0" prefWidth="181.0" />
+                              <TextField fx:id="txt_newAdresseEditeur" layoutX="119.0" layoutY="58.0" prefHeight="25.0" prefWidth="182.0" />
+                              <TextField fx:id="txt_newTelEditeur" layoutX="119.0" layoutY="91.0" prefHeight="25.0" prefWidth="181.0" />
+                              <Button fx:id="btn_ConfirmerModificationsEditeur" layoutX="375.0" layoutY="38.0" mnemonicParsing="false" onAction="#btn_ConfirmerEditeurOnAction" style="-fx-background-color: #1ec11e;" text="Confirmer modifications" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Imprimeur">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="17.0" layoutY="32.0" text="Nom :" />
+                              <Label layoutX="17.0" layoutY="64.0" text="Adresse :" />
+                              <Label layoutX="19.0" layoutY="99.0" text="Télephone :" />
+                              <TextField fx:id="txt_newNomImprimeur" layoutX="116.0" layoutY="28.0" prefHeight="25.0" prefWidth="181.0" />
+                              <TextField fx:id="txt_newAdresseImprimeur" layoutX="116.0" layoutY="60.0" prefHeight="25.0" prefWidth="181.0" />
+                              <TextField fx:id="txt_newTelImprimeur" layoutX="116.0" layoutY="95.0" prefHeight="25.0" prefWidth="181.0" />
+                              <Button fx:id="btn_ConfirmerModificationsImprimeur" layoutX="370.0" layoutY="41.0" mnemonicParsing="false" onAction="#btn_ConfirmerImprimeurOnAction" style="-fx-background-color: #1ec11e;" text="Confirmer modifications" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Pages">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="26.0" text="numéros(s)  de(s) page(s) à supprimer :" />
+                              <Label layoutX="22.0" layoutY="144.0" prefHeight="17.0" prefWidth="205.0" text="Numéro de la page à ajouter  : " />
+                              <Button fx:id="btn_loadPage" layoutX="268.0" layoutY="140.0" mnemonicParsing="false" onAction="#btn_loadPageOnAction" text="Cliquer pour charger la page" />
+                              <TextField fx:id="txt_numPageToDelete" layoutX="229.0" layoutY="22.0" prefHeight="25.0" prefWidth="62.0" promptText="1,3,5" />
+                              <TextField fx:id="txt_numNewPage" layoutX="196.0" layoutY="140.0" prefHeight="25.0" prefWidth="62.0" />
+                              <Label layoutX="308.0" layoutY="26.0" text="Séparer les numéros par des virgules " />
+                              <Label layoutX="308.0" layoutY="42.0" text="Exemple : 1,3,5" />
+                              <Button fx:id="btn_DeletePages" layoutX="410.0" layoutY="67.0" mnemonicParsing="false" onAction="#btn_DeletePagesOnAction" prefHeight="25.0" prefWidth="76.0" text="Supprimer" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Label layoutX="14.0" layoutY="14.0" text="Ouvrage :" />
+            <Label fx:id="lbl_titreOuvrage" layoutX="74.0" layoutY="14.0" text="Titre ouvrage" />
+            <Button fx:id="btn_Retrour" layoutX="45.0" layoutY="298.0" mnemonicParsing="false" onAction="#btn_RetourOnAction" style="-fx-background-color: #386895;" text="&lt; Retour" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="56.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="82.0" layoutY="26.0" prefHeight="29.0" prefWidth="143.0" text="Transcrilog" textFill="#386895">
+               <font>
+                  <Font name="Bookman Old Style" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_nom" layoutX="459.0" layoutY="23.0" text="Label">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_prenom" layoutX="459.0" layoutY="48.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

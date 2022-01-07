@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accueil.accueilController">
+   <top>
+      <AnchorPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="26.0" text="Transcrilog" textFill="#386895">
+               <font>
+                  <Font name="Bookman Old Style" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_nom" layoutX="480.0" layoutY="14.0" text="Nom">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font></Label>
+            <Label fx:id="lbl_prenom" layoutX="480.0" layoutY="39.0" text="Prenom">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Button fx:id="btn_seDeconnecter" layoutX="360.0" layoutY="22.0" mnemonicParsing="false" onAction="#btn_seDeconnecterOnAction" style="-fx-background-color: #a5a9a5;" text="Se deconnecter" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="331.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="365.0" layoutY="3.0" text="Mes ouvrages :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="20.0" />
+               </font></Label>
+            <Button fx:id="btn_demarrerTranslation" layoutX="41.0" layoutY="43.0" mnemonicParsing="false" onAction="#demarrerTranslationOnAction" style="-fx-background-color: #386895;" text="Créer un nouvel ouvrage" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font></Button>
+            <Button fx:id="btn_rechercherOuvrage" layoutX="41.0" layoutY="86.0" mnemonicParsing="false" onAction="#rechercherOuvrageOnAction" style="-fx-background-color: #386895;" text="Rechercher un ouvrage" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="35.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/bibliotheque.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tableView_listeOuvragesPerso" layoutX="298.0" layoutY="36.0" prefHeight="209.0" prefWidth="258.0">
+              <columns>
+                  <TableColumn fx:id="idOuvrage" minWidth="0.0" prefWidth="0.0" text="idOuvrage" />
+                <TableColumn fx:id="titre" prefWidth="257.0" text="Titre" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_detailsOuvrage" layoutX="334.0" layoutY="257.0" mnemonicParsing="false" onAction="#detailsOuvrageOnAction" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: #386895;" text="Détails de l'ouvrage sélectionné" textFill="WHITE" wrapText="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <Button fx:id="btn_deleteOuvrageSelectionned" layoutX="42.0" layoutY="256.0" mnemonicParsing="false" onAction="#btn_deleteOuvrageSelectionned" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #eb0a0a;" text="Supprimer l'ouvrage sélectionné" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

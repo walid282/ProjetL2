@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <top>
+      <AnchorPane prefHeight="73.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nomLog" layoutX="88.0" layoutY="21.0" text="Transcrilog" textFill="#386895">
+               <font>
+                  <Font name="Bookman Old Style" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="55.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="318.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="130.0" layoutX="14.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/userLogoBlue.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="127.0" layoutY="4.0" prefHeight="42.0" prefWidth="238.0" text="Page de connexion" textFill="#386895">
+               <font>
+                  <Font name="Calibri" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mailUser" layoutX="272.0" layoutY="80.0" />
+            <Label layoutX="137.0" layoutY="82.0" text="Adresse email :" textFill="#386895">
+               <font>
+                  <Font name="Calibri" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="126.0" text="Mot de passe :" textFill="#386895">
+               <font>
+                  <Font name="Calibri" size="19.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordUser" layoutX="272.0" layoutY="124.0" />
+            <Label layoutX="40.0" layoutY="237.0" text="Vous n'avez pas de compte ? Veuillez vous inscrire :" textFill="#eb0a0a">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="dggdg" layoutX="328.0" layoutY="167.0" mnemonicParsing="false" onAction="#connexionButtonOnAction" style="-fx-background-color: #386895;" text="Se connecter" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="messageErreur" layoutX="39.0" layoutY="202.0" textFill="#eb0a0a">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="inscriptionButton" layoutX="384.0" layoutY="234.0" mnemonicParsing="false" onAction="#inscriptionButtonOnAction" style="-fx-background-color: #eb0a0a;" text="S'inscrire" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

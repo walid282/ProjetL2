@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ouvrage.ouvrageController">
+   <top>
+      <AnchorPane prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="25.0" text="Transcrilog" textFill="#386895">
+               <font>
+                  <Font name="Bookman Old Style" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_nom" layoutX="489.0" layoutY="16.0" text="Nom">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_prenom" layoutX="489.0" layoutY="42.0" text="Prenom">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="331.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbl_Titre" layoutX="38.0" prefHeight="49.0" prefWidth="373.0" text="Titre" textFill="#386895">
+               <font>
+                  <Font name="Calibri" size="24.0" />
+               </font> 
+            </Label>
+            <Label layoutX="39.0" layoutY="82.0" text="Ecrit par  :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="108.0" prefHeight="17.0" prefWidth="97.0" text="Date de sortie  :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="135.0" text="Maison d'edition :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="167.0" text="Maison d'impression  :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="195.0" text="Ouvrage transcris par :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label layoutX="38.0" layoutY="224.0" text="Commentaire du transcripteur :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_dateSortie" layoutX="224.0" layoutY="108.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_Editeur" layoutX="224.0" layoutY="135.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_Imprimeur" layoutX="224.0" layoutY="167.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_nomTranscripteur" layoutX="223.0" layoutY="195.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <ImageView fx:id="img_Apercu" fitHeight="150.0" fitWidth="200.0" layoutX="384.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../OneDrive/Documents/Image_Projet/livres.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="txtArea_commentaire" layoutX="14.0" layoutY="243.0" prefHeight="62.0" prefWidth="575.0" />
+            <Label layoutX="39.0" layoutY="58.0" text="Nombre de pages :" textFill="#386895" underline="true">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_nbDePage" layoutX="224.0" layoutY="58.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Label fx:id="lbl_nomAuteur" layoutX="224.0" layoutY="82.0">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font></Label>
+            <Button fx:id="btn_retour" layoutX="494.0" layoutY="25.0" mnemonicParsing="false" onAction="#btn_retourOnAction" style="-fx-background-color: #386895;" text="Précédent" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font></Button>
+            <Button fx:id="btn_modifier" layoutX="411.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_modifierOnAction" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #1ec11e;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_transcription" layoutX="302.0" layoutY="24.0" mnemonicParsing="false" onAction="#btn_transcriptionOnAction" prefHeight="28.0" prefWidth="88.0" style="-fx-background-color: #1c95ce;" text="Transcription" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
